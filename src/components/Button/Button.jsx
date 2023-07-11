@@ -2,14 +2,16 @@ import PropTypes from 'prop-types';
 import css from './Button.module.css';
 
 export const Button = ({ onClick, isDisabled }) => (
-  <button
-    type="button"
-    className={css.button}
-    onClick={onClick}
-    disabled={isDisabled}
-  >
-    <span className="button-label">Load more</span>
-  </button>
+  <div className={css.searchbar}>
+    <button
+      type="button"
+      className={css.button}
+      onClick={onClick}
+      disabled={isDisabled}
+    >
+      <span className={css.buttonLabel}>Load more</span>
+    </button>
+  </div>
 );
 
 Button.propTypes = {

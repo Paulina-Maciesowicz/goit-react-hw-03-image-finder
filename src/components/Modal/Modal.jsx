@@ -11,7 +11,7 @@ export const Modal = ({ imageUrl, onCloseModal }) => {
   return (
     <div className={css.overlay} onClick={handleClose}>
       <div className={css.modal}>
-        <img className="img" src={imageUrl} alt="" />
+        <img className={css.img} src={imageUrl} alt="" />
       </div>
     </div>
   );
