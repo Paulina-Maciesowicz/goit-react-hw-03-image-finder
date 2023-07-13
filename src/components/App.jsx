@@ -40,10 +40,10 @@ export class App extends Component {
         }));
       })
       .catch(error => {
-        this.setState(prevState => ({
-          error: error,
+        this.setState({
+          error,
           isLoading: false,
-        }));
+        });
       });
     // this.setState({ data: response.data });
     document.addEventListener('keydown', this.handleKeyDown);
@@ -66,13 +66,14 @@ export class App extends Component {
           }));
         })
         .catch(error => {
-          this.setState(prevState => ({
-            error: error,
+          this.setState({
+            error,
             isLoading: false,
-          }));
+          });
         });
     }
   }
+
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
   }
